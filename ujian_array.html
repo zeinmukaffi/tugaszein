@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfunction()">Klik Disini</button>
+    
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    
+    <script>
+        // Pushing Method : menambahkan element baru ke Array
+        // const buah = ['pisang','apel','nanas','mangga'];
+        // document.getElementById('demo1').innerHTML = buah;
+        // function myfunction(){
+        // buah.push('jeruk');
+        // document.getElementById('demo2').innerHTML = buah;
+        // }
+    </script>
+    <script>
+        // Popping Method : menghapus element terakhir di Array
+        // const hewan = ['harimau','ayam','kambing','singa']
+        // document.getElementById('demo1').innerHTML = hewan;
+        // hewan.pop()
+        // document.getElementById('demo2').innerHTML = hewan;
+    </script>
+    <script>
+        // Converting Arrays to Strings Method : mengonversi array menjadi string nilai Array (dipisahkan koma)
+        // const buah = ['jeruk','melon','jambu','semangka']
+        // document.getElementById('demo1').innerHTML = buah.toString();
+    </script>
+    <script>
+        // Shifting Method : menghapus element pertama di Array
+        // const makanan = ['burger','pizza','kebab','hotdog'];
+        // document.getElementById('demo1').innerHTML = makanan;
+        // makanan.shift();
+        // document.getElementById('demo2').innerHTML = makanan;
+    </script>
+    <script>
+        // Changing Method : elemen Array diakses menggunakan nomor indeksnya
+        // const nama = ['zaki','rizki','ari','arief']
+        // document.getElementById('demo1').innerHTML = nama;
+        // nama[3] = 'ridho';
+        // document.getElementById('demo2').innerHTML = nama;
+    </script>
+    <script>
+        // Splicing Method : menambahkan element baru ke Array
+        // const minuman = ['jus,'soda','bir','air']
+        // document.getElementById('demo1').innerHTML = 'original array:<br>' + minuman;
+        
+        // function myfunction(){
+        // minuman.splice(2,0,'teh','susu');
+        // document.getElementById('demo2').innerHTML = 'new array:<br>' + minuman;
+        // }
+    </script>
+    <script>
+        // Merging Array Method : Metode concat digunakan untuk menggabungkan Array
+        // const nama_perempuan = ['tasya','luna'];
+        // const nama_laki_laki = ['zaki','akmal'];
+        // const anak_anak   = nama_perempuan.concat(nama_laki_laki);
+        // document.getElementById('demo1').innerHTML = anak_anak   ;
+    </script>
+    <script>
+        // Slicing Method : Menghapus bagian dari Array
+        // const hewan = ['ayam','kambing','domba','sapi'];
+        // const hapus = hewan.slice(2);
+        // document.getElementById("demo1").innerHTML = hewan + "<br><br>" + hapus;
+    </script>
+    <script>
+        // Sort Method : Mengurutkan element Array sesuai aalphabet
+        // const makanan = ["seblak", "bakso", "mie ayam", "cilok"];
+        // document.getElementById("demo1").innerHTML = makanan;
+        
+        // function myfunction() {
+        //   makanan.sort();
+        //   document.getElementById("demo1").innerHTML = makanan;
+        // }
+    </script>
+<script>
+    // Delete Method : Menghapus elemen yang tidak ditentukan dalam Array
+    const nilai = [100, 75, 50, 25];
+    document.getElementById("demo1").innerHTML =
+    "nilai kamu adalah " + nilai[3];
+    
+    delete nilai[2];
+    
+    document.getElementById("demo2").innerHTML =
+    "nilai kamu adalah " + nilai[2];
+</script>
+</body>
+</html>
