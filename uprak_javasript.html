@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pengirim = prompt('Nama Pengirim')
+        var penerima = prompt('Nama Penerima')
+        var jarak = prompt('Jarak Pengiriman (dalam kilometer)')
+        var alamat = prompt('Alamat Penerima')
+        var jenis = prompt('Jenis Barang ')
+        var berat = prompt('Berat Barang (dalam kilogram)')
+        var a = confirm('Apakah anda yakin semua data sudah benar?')
+        var harga_ongkir = jarak*10000
+        var harga_berat = berat*5000
+        var total = harga_ongkir+harga_berat
+            document.write ('Nama Pengirim = ' )
+            document.write (pengirim)
+            document.write ('<br> Nama Penerima = ' )
+            document.write (penerima)
+            document.write ('<br> Jarak Pengiriman = ' )
+            document.write (jarak)
+            document.write ('<br> Alamat Penerima = ' )
+            document.write (alamat)
+            document.write ('<br> Biaya Pengiriman = ' )
+            document.write (harga_ongkir)
+            document.write ('<br> Biaya Berat Barang = ' )
+            document.write (harga_berat)
+            document.write ('<br> Total Biaya = ' )
+            document.write (total)
+        var diskon
+        if (harga_ongkir >= 50000){
+            diskon = harga_ongkir*10/100
+        }else diskon = 0
+        var diskon2
+        if (harga_berat >= 100000){
+            diskon2 = harga_berat*5/100
+        }else diskon2 = 0
+            document.write('<br> Biaya Diskon Biaya Pengiriman = ')
+            document.write(diskon)
+            document.write('<br> Biaya Diskon Berat Barang =  ')
+            document.write(diskon2)
+        var total_bayar = diskon+diskon2
+        document.write('<br> Total Yang Harus Di Bayar = ')
+        document.write(total_bayar)
+    </script>
+</body>
+</html>
