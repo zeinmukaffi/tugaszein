@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function persegi(a, b) {
+            var luas = a*b 
+            return luas;
+        }
+        function segitiga(a, b, c) {
+            var luas = a*b*c
+            return luas;
+        }
+        function jajar_genjang(a, b) {
+            var luas = a*b
+            return luas;
+        }
+        function belah_ketupat(a, b, c) {
+            var luas = a*b/c
+            return luas
+            
+        }
+        var pilihan = prompt("Pilih Salah Satu Dari Bangun Ruang Berikut: Persegi, Segitiga, Jajar Genjang, Belah Ketupat")
+        if(pilihan == "Persegi " || pilihan == "persegi" ){
+            alert("Anda memilih persegi. Rumus luas persegi adalah L = s (sisi) x s (sisi)")
+            var a = prompt("Masukan sisi persegi")
+            var c = a*a
+            document.write("Maka luas perseginya adalah ")
+            document.write(c)
+        }else if(pilihan == "Segitiga" || pilihan == "segitiga"){
+            alert("Anda memilih segitiga. Rumus luas segitiga adalah L = ½ × a (alas) × t (tinggi)")
+            const c = 1/2
+            var a = prompt("Masukan alas segitiga ")
+            var b = prompt("Masukan tinggi segitiga")
+            var c = c*a*b
+            document.write("Maka luas segitiganya adalah ")
+            document.write(c)
+        }else if(pilihan == "Jajar Genjang" || pilihan == "jajar genjang"){
+            alert("Anda memilih jajar genjang. Rumus luas jajar genjang adalah L = a (alas) × t (tinggi)")
+            var x = prompt("Masukan alas jajar genjang")
+            var y = prompt("Masukan tinggi jajar genjang")
+            var c = x*y
+            document.write("Maka luas jajar genjangnya adalah ")
+            document.write(c)
+        }else if(pilihan == "Belah Ketupat" || pilihan == "belah ketupat"){
+            alert("Anda memilih belah ketupat. Rumus luas belah ketupat adalah L = d1 (diagonal 1) x d2 (diagonal 2): 2")
+            var k = prompt("Masukan diagonal 1")
+            var l = prompt("Masukan diagonal 2")
+            const m = 2
+            var c = k*l/m
+            document.write("Maka luas belah ketupatnya adalah ")
+            document.write(c)
+        }
+    </script>
+</body>
+</html>
