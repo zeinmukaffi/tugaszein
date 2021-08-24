@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>formulir siswa</title>
+    <style>
+        .container{
+            width: 800px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <br>
+        <div class="form-group">
+            <label for="namasiswa">Nama Siswa</label>
+            <input type="email" class="form-control" id="txt_namasiswa">
+        </div>
+            
+            <label for="kelas">Kelas</label>
+            <select class="form-control" id="txt_kelas">
+                <option value="X">X</option>
+                <option value="XI">XI</option>
+                <option value="XII">XII</option>
+            </select>
+
+            <label for="kelas">Jenis Kelamin</label>
+            <select class="form-control" id="txt_jk">
+                <option value="L">Laki Laki</option>
+                <option value="P">Perempuan</option>
+            </select>
+
+            <label for="jurusan">Jurusan</label>
+            <select class="form-control" id="txt_jurusan">
+                <option value="rpl">RPL</option>
+                <option value="mm">MM</option>
+                <option value="bc">BC</option>
+                <option value="tei">TEI</option>
+                <option value="tkj">TKJ</option>
+            </select>
+
+            <label for="alamt">Alamat Rumah</label>
+            <textarea class="form-control" id="txt_alamat" rows="3"></textarea>
+
+            <button class="btn btn-primary mt-4" onclick="add()">Simpan</button>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Siswa</th>
+                        <th scope="col">Kelas</th>
+                        <th scope="col">Jenis Kelamin</th>
+                        <th scope="col">Jurusan</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="tampilkan">
+                    
+                </tbody>
+              </table>      
+    </div>
+
+    <script>
+        
+        var namasiswa = []
+        var kelas = []
+        var jeniskelamin = []
+        var jurusan = []
+        var alamat = []
+
+        var tampil = document.getElementById ('tampilkan')
+
+        function showData() {
+            tampil.innerHTML = ""
+
+            for(i = 0; i < namasiswa.length; i++){
+                nodata = i+1;
+                  tampil.innerHTML += "<tr>"+
+                        "<td>"+nodata+"</td>"+
+                        "<td>"+namasiswa[i]+"</td>"+
+                        "<td>"+kelas[i]+"</td>"+
+                        "<td>"+jeniskelamin[i]+"</td>"+
+                        "<td>"+jurusan[i]+"</td>"+
+                        "<td>"+alamat[i]+"</td>"+
+                        "<td>"+
+                          "<button class='btn btn-warning'onclick='edit("+ i +")'>Edit</button>"+
+                          "<button class='btn btn-danger'onclick='hapus("+ i +")'>Hapus</button>"
+                      "</td>"+
+                    "</tr>"
+            }
+        }
+
+        showData()
+
+        function add(){
+            var namabaru = document.getElementById('txt_namasiswa').value
+            var kelasbaru = document.getElementById('txt_kelas').value
+            var jkbaru = document.getElementById('txt_jk').value 
+            var jurusanbaru = document.getElementById('txt_jurusan').value
+            var alamatbaru = document.getElementById('txt_alamat').value
+
+            namasiswa.push(namabaru)
+            kelas.push(kelasbaru)
+            jeniskelamin.push(jkbaru)
+            jurusan.push(jurusanbaru)
+            alamat.push(alamatbaru)
+
+
+            showData()
+        }
+
+        function hapus(i){
+            var namabaru = document.getElementById('txt_namasiswa').value
+            var kelasbaru = document.getElementById('txt_kelas').value
+            var jkbaru = document.getSelection('txt_jk').value
+            var jurusanbaru = document.getElementById('txt_jurusan')
+            var alamatbaru = document.getElementById('txt_alamat').value
+
+            namasiswa.splice(i,1)
+            kelas.splice(i,1)
+            jeniskelamin.splice(i,1)
+            jurusan.splice(i,1)
+            alamat.splice(i,1)
+
+            showData()
+        }
+
+        function edit(id){
+            var ganti = prompt("Ganti Nama",namasiswa[id])
+            namasiswa[id] = ganti;
+        
+            var ganti = prompt("Ganti Kelas",kelas[id])
+            kelas[id] = ganti;
+        
+            var ganti = prompt("Ganti Jenis Kelamin",jeniskelamin[id])
+            jeniskelamin[id] = ganti;
+
+            var ganti = prompt("Ganti Jurusan",jurusan[id])
+            jurusan[id] = ganti;
+
+            var ganti = prompt("Ganti Alamat",alamat[id])
+            alamat[id] = ganti;
+        
+            showData()
+        }
+        
+    </script>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
